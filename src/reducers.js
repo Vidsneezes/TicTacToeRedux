@@ -6,7 +6,6 @@ export default function reducer(state = initialState, action){
         case CHANGE_GRID:
             return state.update('grid', list => list.set(action.indexPosition,action.value));
         case END_GAME:
-            return state.set('done',true);
         default:
             return state;
     }

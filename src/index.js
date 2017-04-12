@@ -17,7 +17,7 @@ let unsubscribe = store.subscribe(() =>
 store.dispatch(changeGrid(0,1));
 store.dispatch(changeGrid(4,2));
 store.dispatch(changeGrid(7,1));
-
+store.dispatch(endGame(2));
 
 unsubscribe()
 
