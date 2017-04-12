@@ -3,8 +3,8 @@ import InteractionBox from '../containers/InteractionBox';
 
 const BoardDisplay = ({grid}) => (
     <div>
-        {grid.map(({val,index}) => 
-            <InteractionBox indexPosition={index} />
+        {grid.map((val,index) => 
+            <InteractionBox key={index} indexPosition={index} />
         )}
     </div>
 )
@@ -14,4 +14,4 @@ BoardDisplay.propTypes = {
 }
 
 
-export default Board;
+export default BoardDisplay;
