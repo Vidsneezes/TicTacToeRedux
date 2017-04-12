@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Map } from 'immutable';
+import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import App from './App';
+import App from './components/App';
 import './index.css';
 import reducer from './reducers';
 import { changeGrid, setWinner,endGame } from './actions';
@@ -22,6 +23,8 @@ store.dispatch(endGame());
 unsubscribe()
 
 ReactDOM.render(
-  <App />,
+  <Provider store = {store}>
+    <App />
+  </Provider>,
   document.getElementById('root')
 );
