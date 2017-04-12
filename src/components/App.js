@@ -1,17 +1,8 @@
-import React, { PropTypes } from 'react';
-import InteractionBox from '../containers/InteractionBox';
+import React from 'react';
 
-const App = ({grid}) => (
+const App = () => (
     <div>
-        {grid.map(({val,index}) => 
-            <InteractionBox indexPosition={index} />
-        )}
     </div>
 )
-
-App.propTypes = {
-    grid: PropTypes.array
-}
-
 
 export default App;

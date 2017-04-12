@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import InteractionBox from '../containers/InteractionBox';
 
-const App = ({grid}) => (
+const BoardDisplay = ({grid}) => (
     <div>
         {grid.map(({val,index}) => 
             <InteractionBox indexPosition={index} />
@@ -9,9 +9,9 @@ const App = ({grid}) => (
     </div>
 )
 
-App.propTypes = {
+BoardDisplay.propTypes = {
     grid: PropTypes.array
 }
 
 
-export default App;
+export default Board;
