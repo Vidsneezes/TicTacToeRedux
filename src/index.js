@@ -5,7 +5,7 @@ import { createStore } from 'redux';
 import App from './App';
 import './index.css';
 import reducer from './reducers';
-import { changeGrid, endGame } from './actions';
+import { changeGrid, setWinner,endGame } from './actions';
 
 let store = createStore(reducer);
 
@@ -17,7 +17,8 @@ let unsubscribe = store.subscribe(() =>
 store.dispatch(changeGrid(0,1));
 store.dispatch(changeGrid(4,2));
 store.dispatch(changeGrid(7,1));
-store.dispatch(endGame(2));
+store.dispatch(setWinner(1));
+store.dispatch(endGame());
 
 unsubscribe()
 
