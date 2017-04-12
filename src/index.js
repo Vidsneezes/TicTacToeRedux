@@ -8,8 +8,18 @@ import reducer from './reducers';
 import { changeGrid, endGame } from './actions';
 
 let store = createStore(reducer);
-const jsVal = store.getState().toJS();
-console.log(jsVal);
+
+
+let unsubscribe = store.subscribe(() => 
+  console.log(store.getState().toJS())
+);
+
+store.dispatch(changeGrid(0,1));
+store.dispatch(changeGrid(4,2));
+store.dispatch(changeGrid(7,1));
+
+
+unsubscribe()
 
 ReactDOM.render(
   <App />,
