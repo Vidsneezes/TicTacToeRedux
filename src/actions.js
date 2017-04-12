@@ -14,9 +14,15 @@ export function changeGrid(indexPosition, value){
     }
 }
 
-export function endGame(winner){
+export function endGame(){
     return {
-        type: END_GAME,
+        type: END_GAME
+    }
+}
+
+export function setWinner(winner){
+    return {
+        type: SET_WINNER,
         winner
     }
 }
