@@ -8,7 +8,7 @@ const BoardDisplay = ({grid, done}) => {
         gridPieces = grid.map((val,index) => 
             <InteractionBox key={index} indexPosition={index} />)
      }
-
+     
      return (
         <div>
             {gridPieces}
