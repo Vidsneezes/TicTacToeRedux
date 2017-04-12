@@ -19,12 +19,9 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     }
 }
 
-
-
 const InteractionBox = connect(
     mapStateToProps,
     mapDispatchToProps
 )(DisplayBox)
-
 
 export default InteractionBox;
