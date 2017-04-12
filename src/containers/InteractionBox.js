@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Map } from 'immutable';
 import DisplayBox from '../components/DisplayBox';
-import { changeGrid } from '../actions';
+import { changeGrid, checkGameOver } from '../actions';
 
 
 const mapStateToProps = (state, ownProps) => {
@@ -15,6 +15,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     return {
         onClick: () => {
             dispatch(changeGrid(ownProps.indexPosition,1))
+            dispatch(checkGameOver());
         }
     }
 }

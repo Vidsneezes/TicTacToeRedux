@@ -17,16 +17,3 @@ export function checkGameOver(){
         type: CHECK_GAMEOVER
     }
 }
-
-export function endGame(){
-    return {
-        type: END_GAME
-    }
-}
-
-export function setWinner(winner){
-    return {
-        type: SET_WINNER,
-        winner
-    }
-}
