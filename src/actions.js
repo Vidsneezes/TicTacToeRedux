@@ -6,11 +6,10 @@ export const END_GAME = "END_GAME";
 
 export const initialState = Map({done:false,winner:0, grid:List([0,0,0,0,0,0,0,0,0])});
 
-export function changeGrid(indexPosition, value){
+export function changeGrid(indexPosition){
     return {
         type: CHANGE_GRID,
-        indexPosition,
-        value
+        indexPosition
     }
 }
 

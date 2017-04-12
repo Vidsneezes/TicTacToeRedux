@@ -12,6 +12,7 @@ export default function reducer(state = initialState, action){
             }else if(lastInput === 2){
                 newVal = 1
             }
+            lastInput = newVal;
             return state.update('grid', list => list.set(action.indexPosition,newVal));
         case SET_WINNER:
             return state.set('winner', action.winner);
