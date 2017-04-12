@@ -5,7 +5,8 @@ import BoardDisplay from '../components/BoardDisplay';
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        grid: state.get('grid').toJS()
+        grid: state.get('grid').toJS(),
+        done: state.get('done')
     }
 }
 
