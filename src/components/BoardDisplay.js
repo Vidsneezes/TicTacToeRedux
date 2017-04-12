@@ -7,6 +7,12 @@ const BoardDisplay = ({grid, done}) => {
      {
         gridPieces = grid.map((val,index) => 
             <InteractionBox key={index} indexPosition={index} />)
+     }else{
+         gridPieces = (
+             <p>
+             Game done
+             </p>
+         )
      }
      
      return (
