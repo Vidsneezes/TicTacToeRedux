@@ -14,7 +14,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
         onClick: () => {
-            dispatch(changeGrid(ownProps.indexPosition,1))
+            dispatch(changeGrid(ownProps.indexPosition))
             dispatch(checkGameOver());
         }
     }
