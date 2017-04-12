@@ -4,7 +4,7 @@ export const CHANGE_GRID = "CHANGE_GRID";
 
 export const END_GAME = "END_GAME";
 
-const initialState = Map({done:false,grid:List([000000000])});
+export const initialState = Map({done:false,grid:List([0,0,0,0,0,0,0,0,0])});
 
 export function changeGrid(indexPosition, value){
     return {
