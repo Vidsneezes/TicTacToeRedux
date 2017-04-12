@@ -1,13 +1,14 @@
 import React, { PropTypes } from 'react';
 
-const DisplayBox = ({value}) => (
-    <p>
+const DisplayBox = ({value, onClick}) => (
+    <p onClick={onClick}>
     {value}
     </p>
 )
 
 DisplayBox.propTypes = {
-    value: PropTypes.string.isRequired
+    value: PropTypes.number.isRequired,
+    onClick: PropTypes.func.isRequired
 }
 
 export default DisplayBox;
