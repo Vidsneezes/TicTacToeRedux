@@ -6,7 +6,6 @@ import { createStore } from 'redux';
 import App from './components/App';
 import './index.css';
 import reducer from './reducers';
-import { changeGrid, setWinner,endGame } from './actions';
 
 let store = createStore(reducer);
 

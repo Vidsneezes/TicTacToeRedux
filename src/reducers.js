@@ -1,5 +1,5 @@
 import { List, Map } from 'immutable';
-import { CHANGE_GRID, END_GAME, SET_WINNER, initialState } from './actions';
+import { CHANGE_GRID, CHECK_GAMEOVER, initialState } from './actions';
 
 let lastInput = 2;
 
@@ -14,10 +14,15 @@ export default function reducer(state = initialState, action){
             }
             lastInput = newVal;
             return state.update('grid', list => list.set(action.indexPosition,newVal));
-        case SET_WINNER:
-            return state.set('winner', action.winner);
-        case END_GAME:
-            return state.set('done', true);
+        case CHECK_GAMEOVER:
+            let grid = state.get('grid').toJS();
+            let done = false;
+            let valueWinnder = 0;
+            const stateDone = state.set('done',done);
+            if(done === true){
+                return stateDone.set('winner', valueWinnder);
+            }
+            return stateDone;
         default:
             return state;
     }
