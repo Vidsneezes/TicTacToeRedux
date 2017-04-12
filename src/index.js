@@ -9,7 +9,6 @@ import { changeGrid, setWinner,endGame } from './actions';
 
 let store = createStore(reducer);
 
-
 let unsubscribe = store.subscribe(() => 
   console.log(store.getState().toJS())
 );

@@ -1,9 +1,9 @@
 import React, { PropTypes } from 'react';
 
 const DisplayBox = ({value}) => (
-    <li>
+    <p>
     {value}
-    </li>
+    </p>
 )
 
 DisplayBox.propTypes = {
