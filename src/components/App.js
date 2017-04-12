@@ -1,5 +1,5 @@
 import React from 'react';
-import InteractionBox from './containers/InteractionBox';
+import InteractionBox from '../containers/InteractionBox';
 
 const App = () => (
     <div>

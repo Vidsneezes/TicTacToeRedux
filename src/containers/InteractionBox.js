@@ -1,7 +1,8 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { Map } from 'immutable';
-import DisplayBox from './components/DisplayBox';
-import { changeGrid } from '././actions';
+import DisplayBox from '../components/DisplayBox';
+import { changeGrid } from '../actions';
 
 
 const mapStateToProps = (state, ownProps) => {
